@@ -22,7 +22,14 @@
     <!-- Задание. Найдите кнопку с классом .btn-info и сделайте текст в кнопке: "Кнопка".-->
 
     <script>
-        
+        let myButtons = document.querySelectorAll('button');
+        let myButtonChg;
+        myButtons.forEach(function (elem) {
+            if (elem.classList.contains('btn-info')) {
+                elem.innerText = 'Кнопка';
+            };
+        });
+
     </script>
 </body>
 
