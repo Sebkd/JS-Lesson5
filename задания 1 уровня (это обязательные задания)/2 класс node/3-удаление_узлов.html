@@ -22,7 +22,19 @@
     2. Аналогичным образом удалите элемент с классом .btn-outline-dark -->
 
     <script>
+        function removeElem(elem, nameClassDel) {
+            if (elem.classList.contains(nameClassDel)) {
+                elem.remove();
+            }
+        };
 
+        let newDel = document.querySelectorAll('button');
+        newDel.forEach(function (elem) {
+            removeElem(elem, 'btn-outline-warning');
+        });
+        newDel.forEach(function (elem) {
+            removeElem(elem, 'btn-outline-dark');
+        });
     </script>
 </body>
 
